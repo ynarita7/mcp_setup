@@ -26,11 +26,22 @@ chmod +x setup-mcp.sh
 setup-mcp.bat
 ```
 
-これで以下の3つのMCPツールがインストールされます：
+これで以下の5つのMCPツールがインストールされます：
 
+### 基本ツール
 - **Serena** - コード検索・編集
 - **Context7** - 最新ドキュメント取得
 - **Playwright** - ブラウザ自動化
+
+### データ分析・機械学習向けツール
+- **MongoDB Atlas** - データベース連携
+  - MongoDB Atlasのクラスター作成・管理
+  - 接続文字列の取得
+  - ユーザー・ネットワークアクセス設定
+- **Pulse** - データ分析・可視化
+  - AWS利用コスト分析
+  - ストック市場データ分析
+  - Snowflakeモニタリング
 
 ## 🚀 使い方
 
@@ -48,6 +59,8 @@ setup-mcp.bat
 
 ## 📋 使用例
 
+### 基本的な開発タスク
+
 ```
 あなた: /mcp__serena__initial_instructions
 
@@ -60,11 +73,39 @@ Claude: Serenaを使ってUser認証関連のコードを検索し、
        改善案を提示します。
 ```
 
+### データ分析タスク
+
+```
+あなた: /mcp__serena__initial_instructions
+
+Claude: Serenaの初期設定を読み込みました。
+
+あなた: このプロジェクトのデータ分析パイプラインを改善したい
+
+Claude: Serenaでデータ処理コードを確認し、MongoDB Atlasを使って
+       データの保存方法を最適化します。さらに、Pulseでデータの
+       可視化と分析レポートを作成します。
+```
+
+### 機械学習モデル開発
+
+```
+あなた: /mcp__serena__initial_instructions
+
+Claude: Serenaの初期設定を読み込みました。
+
+あなた: ユーザー行動予測モデルを作成したい
+
+Claude: Serenaでプロジェクトのデータ構造を確認し、MongoDB Atlasで
+       ユーザーデータを取得します。モデル学習と評価のコードを
+       実装し、Context7で最新のML手法を調査します。
+```
+
 ## 📄 プロジェクトに含まれるファイル
 
 - `CLAUDE.md` - Claude Codeの動作設定ファイル（プロジェクトのルートに配置）
-- `setup-mcp.sh` - Mac/Linux用セットアップスクリプト
-- `setup-mcp.bat` - Windows用セットアップスクリプト
+- `setup-mcp.sh` - Mac/Linux用セットアップスクリプト（基本ツール + データ分析・機械学習ツール）
+- `setup-mcp.bat` - Windows用セットアップスクリプト（基本ツール + データ分析・機械学習ツール）
 
 ## ⚠️ 注意点
 
